@@ -22,10 +22,7 @@ function Navbar() {
                     <Link href="/questions" className="text-white hover:text-blue-400">
                         Questions
                     </Link>
-                    <Link href="/how-it-works" className="text-white hover:text-blue-400">
-                        How It Works
-                    </Link>
-
+                  
                     {/* Conditional Authentication Buttons */}
                     {isSignedIn ? (
                         <UserButton />
