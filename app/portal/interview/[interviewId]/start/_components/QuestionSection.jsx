@@ -16,15 +16,15 @@ function QuestionSection({ mockInterviewQuestion,ActiveQuestionIndex }) {
     return mockInterviewQuestion&& (
         <div className="p-5 border rounded-lg my-10">
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
-            {mockInterviewQuestion&&mockInterviewQuestion.interview_questions.map((question, index) => (
+            {mockInterviewQuestion&&mockInterviewQuestion.questions.map((question, index) => (
                     <h2 key={index} className={`p-2  rounded-full  text-xs md:text-sm text-center cursor-pointer ${ActiveQuestionIndex==index ? "bg-blue-600 text-white":"bg-secondary"}`}>
                         Question #{index + 1}
                     </h2>
                 ))}
             </div>
-            <h2>{mockInterviewQuestion.interview_questions[ActiveQuestionIndex]?.question.question}</h2>
-            <h2 className='my-5 text-md md:text-lg'>{mockInterviewQuestion.interview_questions[ActiveQuestionIndex]?.question}</h2>
-            <Volume2 className='cursor-pointer' onClick={()=>textToSpeech(mockInterviewQuestion.interview_questions[ActiveQuestionIndex]?.question)}/>
+            <h2>{mockInterviewQuestion.questions[ActiveQuestionIndex]?.question.question}</h2>
+            <h2 className='my-5 text-md md:text-lg'>{mockInterviewQuestion.questions[ActiveQuestionIndex]?.question}</h2>
+            <Volume2 className='cursor-pointer' onClick={()=>textToSpeech(mockInterviewQuestion.questions[ActiveQuestionIndex]?.question)}/>
             <div className='border rounded-lg p-5 bg-blue-100 mt-20'>
                <h2 className='flex gap-2 items-center text-blue-700'>
                 <Lightbulb/>

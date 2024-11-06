@@ -32,7 +32,6 @@ function StartInterview({ params }) {
     <div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
         {/* Questions */}
-        {console.log(mockInterviewQuestion)}
         {<QuestionSection mockInterviewQuestion={mockInterviewQuestion}
           ActiveQuestionIndex={ActiveQuestionIndex}
         />}
@@ -48,7 +47,7 @@ function StartInterview({ params }) {
       <div className='flex justify-end gap-6'>
         {ActiveQuestionIndex > 0 && <Button onClick={() => setActiveQuestionIndex(ActiveQuestionIndex - 1)}>Previous Question</Button>}
         {ActiveQuestionIndex != mockInterviewQuestion?.length - 1 && <Button onClick={() => setActiveQuestionIndex(ActiveQuestionIndex + 1)}>Next Question</Button>}
-        {ActiveQuestionIndex == mockInterviewQuestion?.interview_questions?.length - 1 && <Link href={'/portal/interview/' + interviewData?.mockId + '/feedback'}>
+        {ActiveQuestionIndex == mockInterviewQuestion?.questions?.length - 1 && <Link href={'/portal/interview/' + interviewData?.mockId + '/feedback'}>
           <Button>End Interview</Button>
         </Link>}
       </div>

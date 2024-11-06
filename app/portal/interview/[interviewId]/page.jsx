@@ -25,12 +25,12 @@ function Interview({ params }) {
              
             setInterviewData(rawData)
             // Log raw data to inspect its format
-            console.log("Raw Data from DB:", rawData);
+            // console.log("Raw Data from DB:", rawData);
 
-            // Parse the cleaned data as JSON
-           //   const interviewDetails = JSON.parse(rawData || "[]"); // Fallback to empty array if rawData is undefined
+            // // Parse the cleaned data as JSON
+            //  const interviewDetails = JSON.parse(rawData || "[]"); // Fallback to empty array if rawData is undefined
 
-            // Set the parsed data to state
+            // // Set the parsed data to state
             // setInterviewData(interviewDetails);
         } catch (error) {
             console.error('Error fetching interview details:', error.message);

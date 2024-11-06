@@ -47,8 +47,8 @@ function RecordAnswerSection({ mockInterviewQuestion, ActiveQuestionIndex,setAct
     };
 
     const UpdateUserAnswer = async () => {
-        const ques = mockInterviewQuestion?.interview_questions?.[ActiveQuestionIndex]?.question;
-        const ans = mockInterviewQuestion?.interview_questions?.[ActiveQuestionIndex]?.answer;
+        const ques = mockInterviewQuestion?.questions?.[ActiveQuestionIndex]?.question;
+        const ans = mockInterviewQuestion?.questions?.[ActiveQuestionIndex]?.answer;
 
         if (!ques) {
             console.error("Question is undefined");
