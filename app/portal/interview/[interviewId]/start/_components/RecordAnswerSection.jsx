@@ -12,7 +12,7 @@ import { UserAnswer } from "@/utils/schema";
 import { useUser } from '@clerk/nextjs';
 import moment from 'moment';
 
-function RecordAnswerSection({ mockInterviewQuestion, ActiveQuestionIndex, interviewData }) {
+function RecordAnswerSection({ mockInterviewQuestion, ActiveQuestionIndex,setActiveQuestionIndex, interviewData }) {
     const [userAnswer, setUserAnswer] = useState("");
     const { user } = useUser();
     const [loading, setLoading] = useState(false);
@@ -82,6 +82,7 @@ function RecordAnswerSection({ mockInterviewQuestion, ActiveQuestionIndex, inter
                 setResults([]);
             }
             setResults([]);
+            setActiveQuestionIndex(ActiveQuestionIndex+1)
         } catch (error) {
             console.error("Error saving answer:", error);
             toast.error("Failed to save answer due to an error.");
